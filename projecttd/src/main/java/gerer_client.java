@@ -9,7 +9,7 @@ public class gerer_client {
 		for(client cl:listc) {
 			if(cl.getNumCli()==c1.getNumCli()) {
 				System.out.println("client "+c1.getNom()+" deja existe");
-				return;
+				return;//pour arreter le recherche et ne pas ajouter le client
 			}
 				
 			
@@ -23,7 +23,7 @@ public class gerer_client {
             if (cl.getNumCli() == c1.getNumCli()) {
                 System.out.println("le client est bien trouve " + cl);
                 found = true;
-                break;
+                break;//arreter le recherche
             }
         }
         if (!found) {
