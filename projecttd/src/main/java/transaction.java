@@ -26,6 +26,8 @@ public class transaction {
      }
       if(!(c1.getDevise().equals(c2.getDevise()))) {
     	  this.trans_type=type.VIRMULTA;//different devise 
+      }else{
+	      this.trans_type=type.VIRCKA;//si tous le test n'est pas verifie
       }
       
       this.timestamp = new Date();
@@ -44,7 +46,7 @@ public class transaction {
   public String getReference() {
       return reference;
   }
-  public List<compte> getcompte() {
+  public List<compte> getcomptes() {
 	  List<compte> l=new ArrayList<>();
 	  l.add(com1);
 	  l.add(com2);
@@ -67,7 +69,7 @@ public class transaction {
 
   public void setComptes(compte compte1,compte compte2) {
       this.com1 = compte1;
-      this.com1 = compte1;
+      this.com2 = compte2;
   }
   @Override
   public String toString() {
